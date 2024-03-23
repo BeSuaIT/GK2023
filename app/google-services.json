@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "575083517666",
+    "project_id": "gk2023-47110",
+    "storage_bucket": "gk2023-47110.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:575083517666:android:9018182d1171c8f2cd30bb",
+        "android_client_info": {
+          "package_name": "com.example.gk2023"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDC_s-rYf0vgwgpiCYDPFR9bCB7L698bSQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
