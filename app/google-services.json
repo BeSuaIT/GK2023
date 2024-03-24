@@ -1,13 +1,14 @@
 {
   "project_info": {
-    "project_number": "575083517666",
-    "project_id": "gk2023-47110",
-    "storage_bucket": "gk2023-47110.appspot.com"
+    "project_number": "276987242197",
+    "firebase_url": "https://gk2024-94847-default-rtdb.firebaseio.com",
+    "project_id": "gk2024-94847",
+    "storage_bucket": "gk2024-94847.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:575083517666:android:9018182d1171c8f2cd30bb",
+        "mobilesdk_app_id": "1:276987242197:android:2b38fd03a248e191dfa45c",
         "android_client_info": {
           "package_name": "com.example.gk2023"
         }
@@ -15,7 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDC_s-rYf0vgwgpiCYDPFR9bCB7L698bSQ"
+          "current_key": "AIzaSyCCkIrUSMn2_DH4fFR0RdjCNTCQCERLUdQ"
         }
       ],
       "services": {
