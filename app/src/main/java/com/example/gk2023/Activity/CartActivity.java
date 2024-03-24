@@ -74,47 +74,6 @@ public class CartActivity extends AppCompatActivity {
         rcvcart.setAdapter(cartAdapter);
     }
 
-//    private void fetchproductfromDB() {
-//        int totalPrice = calculateTotalPrice(cartList);
-//        textView_total.setText(String.valueOf(totalPrice));
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        String userID = user.getUid();
-//        DatabaseReference databaseReference = database.getReference("Accounts").child(userID).child("cart");
-//
-//        databaseReference.addChildEventListener(new ChildEventListener() {
-//            @Override
-//            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-//                Cart cart = snapshot.getValue(Cart.class);
-//                cartList.add(cart);
-//                cartAdapter.notifyDataSetChanged();
-//
-//                int totalPrice = calculateTotalPrice(cartList);
-//                textView_total.setText(String.valueOf(totalPrice));
-//            }
-//
-//
-//            @Override
-//            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-//
-//            }
-//
-//            @Override
-//            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
-//            }
-//
-//            @Override
-//            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-//
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
-//
-//    }
-
     private void fetchproductfromDB() {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         String userID = user.getUid();
@@ -123,7 +82,7 @@ public class CartActivity extends AppCompatActivity {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                cartList.clear(); // Xóa danh sách cũ
+                cartList.clear();
                 for (DataSnapshot childSnapshot : snapshot.getChildren()) {
                     Cart cart = childSnapshot.getValue(Cart.class);
                     cartList.add(cart);
@@ -136,7 +95,6 @@ public class CartActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                // Xử lý khi có lỗi xảy ra
             }
         });
     }

@@ -132,7 +132,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                // Xử lý khi có lỗi xảy ra
             }
         });
     }
