@@ -68,9 +68,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
                 int currentAmount = cart.getAmount();
                 if (currentAmount > 1) {
                     int updatedAmount = currentAmount - 1;
-                    int updatedPrice = cart.getPrice() / currentAmount * updatedAmount;
                     cart.setAmount(updatedAmount);
-                    cart.setPrice(updatedPrice);
                     notifyDataSetChanged();
                     updateCartItem(cart);
                 } else {
@@ -84,9 +82,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
             public void onClick(View v) {
                 int currentAmount = cart.getAmount();
                 int updatedAmount = currentAmount + 1;
-                int updatedPrice = cart.getPrice() * updatedAmount;
                 cart.setAmount(updatedAmount);
-                cart.setPrice(updatedPrice);
                 notifyDataSetChanged();
                 updateCartItem(cart);
             }
@@ -125,7 +121,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     snapshot.getRef().child("amount").setValue(cart.getAmount());
-                    snapshot.getRef().child("price").setValue(cart.getPrice());
                     break;
                 }
             }
