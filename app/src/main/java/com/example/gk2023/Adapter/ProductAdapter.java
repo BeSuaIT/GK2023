@@ -47,7 +47,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     public void onBindViewHolder(@NonNull ProductAdapter.ProductViewHolder holder, int position) {
         Product product = productList.get(position);
         holder.name.setText(product.getName());
-        holder.price.setText(String.valueOf(product.getPrice()));
+        holder.price.setText(product.getPrice() + " VNĐ");
         holder.description.setText(product.getDescription());
         Glide.with(context).load(product.getImg()).centerCrop().into(holder.image);
 

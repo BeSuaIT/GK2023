@@ -6,23 +6,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.gk2023.Adapter.ProductAdapter;
-import com.example.gk2023.Entity.Cart;
 import com.example.gk2023.Entity.Product;
 import com.example.gk2023.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -81,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void fetchproductfromDB() {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference databaseReference = database.getReference("Flowers");
+        DatabaseReference databaseReference = database.getReference("VongTay");
         DatabaseReference userRef = database.getReference("Accounts");
         String userID = user.getUid();
         userRef.addValueEventListener(new ValueEventListener() {

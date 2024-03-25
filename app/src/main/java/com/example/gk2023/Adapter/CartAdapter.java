@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.gk2023.Entity.Cart;
-import com.example.gk2023.Entity.Product;
 import com.example.gk2023.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -47,7 +46,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
     public void onBindViewHolder(@NonNull CartAdapter.CartViewHolder holder, int position) {
         Cart cart = cartList.get(position);
         holder.name.setText(cart.getName());
-        holder.price.setText(String.valueOf(cart.getPrice()));
+        holder.price.setText(cart.getPrice() + " VNĐ");
         holder.amount.setText(String.valueOf(cart.getAmount()));
         Glide.with(context).load(cart.getImg()).centerCrop().into(holder.image);
 
